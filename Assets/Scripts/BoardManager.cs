@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    public static BoardManager Instance { get; private set; }
-
-    [SerializeField] private List<Transform> tiles;
+    [SerializeField] private List<Tile> tiles;
+    [SerializeField] private GameObject tilesParent; 
     public int CountTiles { get; private set; }
 
     private void Awake()
     {
-        Instance = this;
+        tiles = tilesParent.GetComponentsInChildren<Tile>().ToList();
         CountTiles = tiles.Count;
-        /*for (int i = 0; i < tilesParent.transform.childCount; i++)
-        {
-            var child = tilesParent.transform.GetChild(i);
-            tiles.Add(child);
-        }*/
     }
 
-    public Transform GetTile(int index)
+    public Tile GetTile(int index)
     {
-        return tiles[index].transform;
+        return tiles[index];
     }
 }

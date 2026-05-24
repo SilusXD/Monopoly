@@ -12,10 +12,13 @@ public class Player : MonoBehaviour
 
     public void Move(int countSteps)
     {
-        _currentTileIndex = (_currentTileIndex + countSteps) % BoardManager.Instance.CountTiles;
+        _currentTileIndex = (_currentTileIndex + countSteps) % GameManager.Instance.BoardManager.CountTiles;
 
-        var tileTransorm = BoardManager.Instance.GetTile(_currentTileIndex);
+        var tile = GameManager.Instance.BoardManager.GetTile(_currentTileIndex);
 
-        _playerTransorm.position = new Vector3(tileTransorm.position.x, tileTransorm.position.y);
+        var a = tile.transform.position.x;
+        var b = tile.transform.position.y;
+
+        _playerTransorm.position = new Vector3(a, b);
     }
 }
