@@ -1,24 +1,42 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     private int _currentTileIndex = 0;
     private Transform _playerTransorm;
+    public event Action<Player> OnFinishedStep;
 
     private void Awake()
     {
         _playerTransorm = GetComponentInChildren<Transform>();
     }
 
-    public void Move(int countSteps)
+    public IEnumerator Move(int countSteps)
     {
-        _currentTileIndex = (_currentTileIndex + countSteps) % GameManager.Instance.BoardManager.CountTiles;
+        for (int i = 0; i < countSteps; i++)
+        {
+            _currentTileIndex++;
 
-        var tile = GameManager.Instance.BoardManager.GetTile(_currentTileIndex);
+            if (_currentTileIndex >= GameManager.Instance.BoardManager.CountTiles)
+            {
+                _currentTileIndex = 0;
+            }
 
-        var a = tile.transform.position.x;
-        var b = tile.transform.position.y;
+            var tile = GameManager.Instance.BoardManager.GetTile(_currentTileIndex);
 
-        _playerTransorm.position = new Vector3(a, b);
+            while (Vector3.Distance(transform.position, tile.transform.position) > 0.01f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, tile.transform.position, 3 * Time.deltaTime);
+
+                yield return null;
+            }
+
+            transform.position = tile.transform.position;
+            
+        }
+
+        OnFinishedStep?.Invoke(this);
     }
 }
