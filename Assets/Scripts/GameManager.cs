@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using Unity.Multiplayer.PlayMode;
+using Unity.Netcode;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
     public static GameManager Instance { get; private set; }
     [field: SerializeField] public BoardManager BoardManager { get; private set; }
@@ -42,7 +43,6 @@ public class GameManager : MonoBehaviour
     {
         ChangeCanTakeStepState(true);
     }
-
 
     public void TakeStep()
     {

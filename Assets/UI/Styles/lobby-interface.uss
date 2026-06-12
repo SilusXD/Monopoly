@@ -1,0 +1,130 @@
+:root {
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-basis-0 {
+    flex-basis: 0%;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.padding-all-4 {
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.border {
+    border-left-color: rgb(223, 209, 190);
+    border-right-color: rgb(223, 209, 190);
+    border-top-color: rgb(223, 209, 190);
+    border-bottom-color: rgb(223, 209, 190);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.font-style-bold {
+    -unity-font-style: bold;
+}
+
+.panel {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu {
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(236, 221, 201);
+}
+
+.menu-panel {
+    background-color: rgb(244, 234, 224);
+}
+
+.players-panel {
+    flex-grow: 2;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: rgb(244, 235, 225);
+}
+
+.game-settings-panel {
+    flex-grow: 4;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background-color: rgb(244, 235, 225);
+}
+
+.lobby-code-panel {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: rgb(244, 235, 225);
+    align-items: center;
+    flex-grow: 1;
+}
+
+.lobby-code-field {
+    flex-direction: row;
+    align-self: stretch;
+    justify-content: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.lobby-code-label {
+    padding: 8px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    -unity-text-align: middle-center;
+    font-size: 36px;
+    margin-top: 0;
+    margin-right: 8px;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex-grow: 1;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    -unity-text-outline-width: 0.5px;
+    letter-spacing: 5px;
+}
+
+.lobby-code-button {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    aspect-ratio: 1;
+    background-image: url("project://database/Assets/Art/Icons/CopyIcon.svg?fileID=7388822144124034973&guid=92a365c9b50b1dc42907aa4852fca9de&type=3#CopyIcon");
+    background-size: 50% 50%;
+}

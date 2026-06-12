@@ -1,0 +1,54 @@
+.panel {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    min-height: 0;
+}
+
+.menu {
+    flex-direction: row;
+    width: 90%;
+    max-width: 1800px;
+    height: 90%;
+    max-height: 900px;
+    min-width: 0;
+    min-height: 0;
+    padding: 16px;
+    background-color: rgb(236, 221, 201);
+}
+
+.players-panel {
+    border-left-color: rgb(223, 209, 190);
+    border-right-color: rgb(223, 209, 190);
+    border-top-color: rgb(223, 209, 190);
+    border-bottom-color: rgb(223, 209, 190);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    flex-grow: 2;
+    flex-basis: 0;
+}
+
+.game-settings-panel {
+    flex-grow: 4;
+    min-width: 0;
+    min-height: 0;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.lobby-code-panel {
+    flex-grow: 1;
+    min-width: 0;
+    min-height: 140px;
+    align-items: center;
+    padding: 12px;
+    margin-right: 12px;
+}
+
+.chat-panel {
+    flex-basis: 0;
+    flex-grow: 2;
+}

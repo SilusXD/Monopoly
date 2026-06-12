@@ -1,0 +1,56 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/utilities.uss?fileID=7433441132597879392&amp;guid=96fe452ed19528749b198d1307501d7d&amp;type=3#utilities"/>
+    <Style src="project://database/Assets/UI/Styles/lobby-layout.uss?fileID=7433441132597879392&amp;guid=6b2587775248862428ff5d968d8a3666&amp;type=3#lobby-layout"/>
+    <Style src="project://database/Assets/UI/Styles/lobby-controls.uss?fileID=7433441132597879392&amp;guid=3c4cea53c6acd6043805ea737bc1fd1e&amp;type=3#lobby-controls"/>
+    <ui:VisualElement name="panel" class="panel">
+        <ui:VisualElement name="menu" class="menu border rounded">
+            <ui:VisualElement class="flex-grow-1 flex-basis-0">
+                <ui:VisualElement name="game-settings" class="game-settings-panel border rounded surface flex-basis-0"/>
+                <ui:VisualElement name="lobby-code-panel" class="lobby-code-panel border rounded surface flex-basis-0">
+                    <ui:Label text="LOBBY CODE" class="mt-10 p-4 text-outline text-20"/>
+                    <ui:VisualElement name="lobby-code-field" class="lobby-code-field">
+                        <ui:Label name="lobby-code-label" text="X7A9B2" class="lobby-code-label border rounded"/>
+                        <ui:Button name="lobby-code-button" class="lobby-code-button border rounded surface"/>
+                    </ui:VisualElement>
+                    <ui:Label text="Share this code to invite friends!" class="mt-10 text-gray text-16"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="players-panel" class="players-panel surface">
+                <ui:VisualElement name="players-title" class="players-title">
+                    <ui:VisualElement name="players-title-icon" class="players-title-icon"/>
+                    <ui:Label text="PLAYERS  (2 / 4)" name="players-title-label" class="players-title-label"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="players-list" class="players-list">
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="player-slot">
+                        <ui:VisualElement class="player-avatar" style="flex-grow: 1;"/>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement name="chat-panel" class="chat-panel" style="flex-grow: 3;">
+                    <ui:VisualElement name="chat-history-container" class="chat-history-container border rounded">
+                        <ui:VisualElement name="chat-title" class="chat-title">
+                            <ui:VisualElement name="chat-title-icon" class="chat-title-icon"/>
+                            <ui:Label text="CHAT" name="chat-title-label" class="chat-title-label"/>
+                        </ui:VisualElement>
+                        <ui:ListView name="chat-history" class="chat-history"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="chat-field" class="chat-field border rounded"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
